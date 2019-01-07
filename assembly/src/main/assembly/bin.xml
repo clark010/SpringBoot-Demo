@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<assembly>
+    <id>assembly</id>
+
+    <formats>
+        <format>tar.gz</format>
+        <format>zip</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <moduleSets>
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+            <!--
+            <includeSubModules>true</includeSubModules>
+            -->
+            <includes>
+                <include>com.clark010:submodule1</include>
+            </includes>
+            <binaries>
+                <outputDirectory>/test-projects-1.0.0/lib</outputDirectory>
+                <unpack>false</unpack>
+                <dependencySets>
+                    <dependencySet>
+                        <useProjectArtifact>true</useProjectArtifact>
+                        <useTransitiveFiltering>true</useTransitiveFiltering>
+                        <scope>runtime</scope>
+                    </dependencySet>
+                </dependencySets>
+            </binaries>
+        </moduleSet>
+    </moduleSets>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}/../bin</directory>
+            <outputDirectory>/test-projects-1.0.0/bin</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/../conf</directory>
+            <outputDirectory>/test-projects-1.0.0/conf</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/../module1/submodule1/conf</directory>
+            <outputDirectory>/test-projects-1.0.0/conf</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+</assembly>
