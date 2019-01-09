@@ -11,6 +11,7 @@
         <module>build-configuration</module>
         <module>module1</module>
         <module>assembly</module>
+        <module>module2</module>
     </modules>
 
     <packaging>pom</packaging>

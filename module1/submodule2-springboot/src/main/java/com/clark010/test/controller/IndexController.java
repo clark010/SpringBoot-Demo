@@ -3,6 +3,7 @@ package com.clark010.test.controller;
 import java.util.Date;
 import java.util.HashMap;
 
+import com.clark010.test.Module2Utils;
 import com.clark010.test.Utils;
 import com.clark010.test.bean.User;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +37,8 @@ public class IndexController {
         user.setId(id);
         user.setName(name);
         user.setDate(new Date());
-        Utils.print("-------> get meothod");
+        Utils.print("-------> getUser api");
+        Module2Utils.test2();
         return user;
     }
 
