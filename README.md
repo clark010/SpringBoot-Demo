@@ -63,7 +63,9 @@ multi level modules with assembly
 ```
 
 其中依赖关系为
+
 submodule2-springboot =====> submodule0-common / module2
+
 submodule1 =====> submodule0-common / submodule2-springboot
 
 -------------
